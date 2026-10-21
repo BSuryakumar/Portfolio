@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surya Kumar Balasubramanian | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    color:#fff;
+    overflow-x:hidden;
+    background:#000;
+}
+
+/* Fixed Background */
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    linear-gradient(
+    rgba(2,6,23,.80),
+    rgba(15,23,42,.85)
+    ),
+    url('https://media.licdn.com/dms/image/v2/D5635AQENjly2M69jIA/profile-framedphoto-shrink_400_400/B56aDKFKtkH0AI-/0/1790096747589?e=1793188800&v=beta&t=cBlPahICjBj3t12gR9yFfG6MUrNGdx_H1xqC3gU2cl0');
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,.5);
+    backdrop-filter:blur(15px);
+    padding:15px 8%;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 80px;
+}
+
+.hero-content{
+    max-width:1000px;
+    animation:fadeUp 1.3s ease;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+
+    background:linear-gradient(
+    90deg,
+    #60a5fa,
+    #a78bfa,
+    #06b6d4
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    font-weight:500;
+    margin-bottom:20px;
+    color:#dbeafe;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+.btn-group{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.4s;
+}
+
+.primary{
+    background:#3b82f6;
+    color:white;
+}
+
+.primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px #3b82f6;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.secondary:hover{
+    background:white;
+    color:#111;
+}
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.6rem;
+    margin-bottom:50px;
+}
+
+/* Glass Cards */
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Statistics */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    padding:30px;
+    text-align:center;
+}
+
+.stat-card h3{
+    font-size:3rem;
+    color:#60a5fa;
+}
+
+/* Skills */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill{
+    padding:18px;
+    text-align:center;
+}
+
+.skill:hover{
+    background:#2563eb;
+}
+
+/* Timeline */
+
+.timeline{
+    max-width:950px;
+    margin:auto;
+}
+
+.timeline-item{
+    padding:25px;
+    margin-bottom:20px;
+    border-left:4px solid #60a5fa;
+}
+
+.timeline-item h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+/* Projects */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    padding:25px;
+}
+
+.project h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+/* Why Hire Me */
+
+.why{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:35px;
+    line-height:2;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact h3{
+    margin-bottom:20px;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,.4);
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card{
+    animation:fadeUp 1s ease;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.hero h2{
+    font-size:1rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.btn{
+    width:250px;
+    text-align:center;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">Surya Kumar</div>
+        <div class="nav-links">
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Surya Kumar Balasubramanian</h1>
+
+<h2>
+Senior Software Engineer | SDET | Automotive Infotainment Specialist
+</h2>
+
+<p>
+Experienced Full-Stack Software Developer and Software Development Engineer in Test with 8+ years of expertise in Automotive Infotainment, Android Development, Angular, Vue.js, Node.js, CAN Communication, Bluetooth Validation, CarPlay, Test Automation, Quality Engineering, and Product Delivery.
+</p>
+
+<div class="btn-group">
+<a href="#" class="btn primary">Download Resume</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+<h2 class="section-title">Professional Highlights</h2>
+
+<div class="stats">
+<div class="card stat-card">
+<h3>8+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="card stat-card">
+<h3>15+</h3>
+<p>Projects Delivered</p>
+</div>
+
+<div class="card stat-card">
+<h3>25+</h3>
+<p>Technologies</p>
+</div>
+
+<div class="card stat-card">
+<h3>100%</h3>
+<p>Quality Driven</p>
+</div>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="card skill">Angular</div>
+<div class="card skill">Vue.js</div>
+<div class="card skill">Node.js</div>
+<div class="card skill">Android</div>
+<div class="card skill">Java</div>
+<div class="card skill">Python</div>
+<div class="card skill">MongoDB</div>
+<div class="card skill">Firebase</div>
+<div class="card skill">CAN Protocol</div>
+<div class="card skill">Bluetooth</div>
+<div class="card skill">CarPlay</div>
+<div class="card skill">Test Automation</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline">
+
+<div class="card timeline-item">
+<h3>Automotive Infotainment Engineer</h3>
+<p>
+Validation and automation for Bluetooth, USB, Apple CarPlay, ECU Communication, Navigation, Audio and CAN systems.
+</p>
+</div>
+
+<div class="card timeline-item">
+<h3>Full Stack Developer</h3>
+<p>
+Developed enterprise web and mobile applications using Angular, Vue.js, Node.js, MongoDB and Firebase.
+</p>
+</div>
+
+<div class="card timeline-item">
+<h3>SDET & Test Automation Engineer</h3>
+<p>
+Designed automation frameworks, quality strategies and test solutions for large-scale products.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="card project">
+<h3>Polaris Infotainment Platform</h3>
+<p>Automated infotainment validation covering CAN, Bluetooth, USB, CarPlay and system integration testing.</p>
+</div>
+
+<div class="card project">
+<h3>Caterpillar Enterprise Applications</h3>
+<p>Developed responsive enterprise web solutions using Vue.js and backend integrations.</p>
+</div>
+
+<div class="card project">
+<h3>DIKSHA Learning Platform</h3>
+<p>Education ecosystem supporting online learning, events and student engagement.</p>
+</div>
+
+<div class="card project">
+<h3>Healthcare Consultation Platform</h3>
+<p>Remote consultation solution connecting doctors, medical representatives and pharmacies.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why Hire Me?</h2>
+
+<div class="card why">
+
+✅ 8+ Years Industry Experience<br>
+
+✅ Full Stack Developer + SDET Expertise<br>
+
+✅ Automotive Infotainment Specialist<br>
+
+✅ Android & Enterprise Web Development<br>
+
+✅ Test Automation & Quality Engineering<br>
+
+✅ End-to-End Product Delivery Experience<br>
+
+✅ Strong Client Communication & Leadership
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Let's Connect</h2>
+
+<div class="card why contact">
+
+<h3>Available for Senior Software Engineer, SDET and Automotive Roles</h3>
+
+<div class="contact-links">
+<a class="btn primary" target="blank" href="https://www.linkedin.com/in/surya-kumar-2975b4153/">LinkedIn</a>
+<a class="btn secondary" href="#">GitHub</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Surya Kumar Balasubramanian | Senior Software Engineer | SDET
+</footer>
+
+</body>
+</html>

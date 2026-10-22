@@ -331,7 +331,73 @@ footer{
 }
 }
 
+.menu-btn{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:rgba(15,23,42,.98);
+        backdrop-filter:blur(10px);
+
+        flex-direction:column;
+        align-items:center;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:.4s ease;
+    }
+
+    .nav-links.active{
+        max-height:300px;
+        padding:20px 0;
+    }
+
+    .nav-links a{
+        padding:12px;
+        width:100%;
+        text-align:center;
+    }
+}
+
 </style>
+
+<script>
+function toggleMenu() {
+
+    document
+        .getElementById("mobileMenu")
+        .classList
+        .toggle("active");
+}
+
+</script>
 </head>
 
 <body>
@@ -341,10 +407,13 @@ footer{
 <nav>
     <div class="nav-container">
         <div class="logo">Surya Kumar</div>
-        <div class="nav-links">
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+		<div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="nav-links" id="mobileMenu">
+            <a href="#skills" onclick="toggleMenu()">Skills</a>
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
         </div>
     </div>
 </nav>

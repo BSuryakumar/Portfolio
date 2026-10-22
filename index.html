@@ -386,9 +386,450 @@ footer{
     }
 }
 
+.companies{
+    /*display:grid;*/
+	display:flex;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.company-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    /*padding:25px;*/
+	padding:14px;
+    transition:.4s;
+}
+
+.company-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(59,130,246,.3);
+}
+
+.company-card h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+.company-card p{
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.company-logo{
+    width:120px;
+    height:60px;
+    object-fit:contain;
+    margin-bottom:15px;
+	/*
+	position: absolute;
+    right: 0%;
+	*/
+}
+
+@media screen and (max-width: 1200px) {
+
+    .companies{
+		display:grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 0fr));
+		margin: 52px;
+    }
+	
+	.company-card {
+	    width: fit-content;
+	}
+	
+	.company-logo {
+		width: 150px;
+		height: 100px;
+		object-fit: fill;
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+
+    .companies{
+		display:grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 0fr));
+		margin: 50px;
+    }
+}
+
+@media screen and (max-width: 1194px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(270px, 0fr));
+		margin: 64px;
+    }
+}
+
+@media screen and (max-width: 1192px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(250px, 0fr));
+		margin: 90px;
+    }
+}
+
+@media screen and (max-width: 1183px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+    }
+}
+
+@media screen and (max-width: 1146px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(230px, 0fr));
+    }
+}
+
+@media screen and (max-width: 1110px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(220px, 0fr));
+    }
+}
+
+@media screen and (max-width: 1075px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(210px, 0fr));
+    }
+}
+
+@media screen and (max-width: 1039px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
+    }
+}
+
+@media screen and (max-width: 1004px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(190px, 0fr));
+    }
+}
+
+@media screen and (max-width: 968px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(180px, 0fr));
+    }
+}
+
+@media screen and (max-width: 932px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(170px, 0fr));
+    }
+}
+
+@media screen and (max-width: 897px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(160px, 0fr));
+    }
+}
+
+@media screen and (max-width: 861px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(250px, 0fr));
+    }
+}
+
+@media screen and (max-width: 855px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+    }
+}
+
+@media screen and (max-width: 831px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(230px, 0fr));
+    }
+}
+
+@media screen and (max-width: 807px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(220px, 0fr));
+    }
+}
+
+@media screen and (max-width: 783px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(210px, 0fr));
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(190px, 0fr));
+    }
+}
+
+@media screen and (max-width: 712px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(180px, 0fr));
+    }
+}
+
+@media screen and (max-width: 688px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(170px, 0fr));
+    }
+}
+
+@media screen and (max-width: 664px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(160px, 0fr));
+    }
+}
+
+@media screen and (max-width: 641px) {
+
+    .companies{
+		grid-template-columns: none;
+		padding-left: 96px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+
+    .companies{
+		padding-left: 93px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .companies{
+		padding-left: 90px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+
+    .companies{
+		padding-left: 87px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    .companies{
+		padding-left: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .companies{
+		padding-left: 70px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+
+    .companies{
+		padding-left: 65px;
+    }
+}
+
+@media screen and (max-width: 585px) {
+
+    .companies{
+		padding-left: 60px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .companies{
+		padding-left: 55px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+
+    .companies{
+		padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+
+    .companies{
+		padding-left: 45px;
+    }
+}
+
+@media screen and (max-width: 538px) {
+
+    .companies{
+		padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+
+    .companies{
+		padding-left: 32px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+
+    .companies{
+		padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .companies{
+		padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    .companies{
+		padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 477px) {
+
+    .companies{
+		padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .companies{
+		padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+
+    .companies{
+		grid-template-columns: repeat(auto-fit, minmax(290px, 0fr));
+		padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .companies{
+		margin-left: 85px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    .companies{
+		margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .companies{
+		margin-left: 75px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+
+    .companies{
+		margin-left: 70px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .companies{
+		margin-left: 67px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .companies{
+		margin-left: 57px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .companies{
+		margin-left: 55px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .companies{
+		margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .companies{
+		margin-left: 45px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    .companies{
+		margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+
+    .companies{
+		margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .companies{
+		margin-left: 0px;
+    }
+}
+
 </style>
 
 <script>
+
 function toggleMenu() {
 
     document
@@ -396,6 +837,26 @@ function toggleMenu() {
         .classList
         .toggle("active");
 }
+
+document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+});
+
+document.addEventListener('keydown', function(e){
+
+    if(e.key === 'F12'){
+        e.preventDefault();
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.key === 'I'){
+        e.preventDefault();
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.key === 'J'){
+        e.preventDefault();
+    }
+
+});
 
 </script>
 </head>
@@ -467,6 +928,86 @@ Experienced Full-Stack Software Developer and Software Development Engineer in T
 </div>
 
 </section>
+
+<section id="experience">
+
+    <h2 class="section-title">Organizations & Clients</h2>
+
+    <div class="companies">
+		
+		<div class="company-card">
+			<img src="tataelxsi.png" alt="Tata Elxsi" class="company-logo">
+        </div>
+		
+		<div class="company-card">
+			<img src="polaris.png" alt="Tata Elxsi" class="company-logo">
+        </div>
+		
+		<div class="company-card">
+			<img src="CAT.png" alt="Tata Elxsi" class="company-logo">
+        </div>
+
+        <div class="company-card">
+			<img src="zg.png" alt="Tata Elxsi" class="company-logo">
+        </div>
+
+        <div class="company-card">
+			<img src="HB.png" alt="Tata Elxsi" class="company-logo">
+        </div>
+
+        <div class="company-card">
+			<img src="FourenTech.jpeg" alt="Tata Elxsi" class="company-logo">
+        </div>
+		
+		<!--
+        <div class="company-card">
+			<img src="tataelxsi.png" alt="Tata Elxsi" class="company-logo">
+            <h3 style="width: 160px;">Tata Elxsi</h3>
+            <p style="width: 200px;">SDET / Specialist</p><br>
+			<p>Key Clients:</p>
+			<li style="margin:14px;"><h3>Polaris India Pvt Ltd</h3></li>
+			<span>Automotive Infotainment Validation • CANalyzer • Bluetooth • USB • CarPlay • Automation Testing</span>
+        </div>
+		
+		<div class="company-card">
+			<img src="tataelxsi.png" alt="Tata Elxsi" class="company-logo">
+            <h3 style="width: 160px;">Tata Elxsi</h3>
+            <p style="width: 200px;">Senior Software Engineer</p><br>
+			<p>Key Clients:</p>
+			<li style="margin:14px;"><h3>Caterpillar</h3></li>
+			<p>
+				Developed enterprise web applications and UI solutions
+				using Vue.js and modern web technologies.
+			</p>
+			<li style="margin:14px;"><h3>Polaris India Pvt Ltd</h3></li>
+			<span>Automotive Infotainment Validation • CANalyzer • Bluetooth • USB • CarPlay • Automation Testing</span>
+        </div>
+
+        <div class="company-card">
+			<img src="zg.png" alt="Tata Elxsi" class="company-logo">
+            <h3 style="width: 160px;">Zero Gravity Photography</h3>
+            <p style="width: 200px;">Angular Developer</p>
+            <span>UI/UX & Front-End Developer</span>
+        </div>
+
+        <div class="company-card">
+			<img src="HB.png" alt="Tata Elxsi" class="company-logo">
+            <h3 style="width: 160px;">Helpful Balance India Pvt Ltd</h3>
+            <p style="width: 200px;">Full Stack Developer</p>
+            <span>Node.js • AJAX • Android • MySQL • Firebase • Bootstrap • HTML • Cordova • Ionic • Angular • JavaScript</span>
+        </div>
+
+        <div class="company-card">
+			<img src="FourenTech.jpeg" alt="Tata Elxsi" class="company-logo">
+            <h3 style="width: 160px;">Fouren Technologies Pvt Ltd</h3>
+            <p style="width: 200px;">Full Stack Developer</p>
+            <span>Node.js • AJAX • Android • MongoDB • MySQL • Firebase • Bootstrap • HTML • Cordova • Ionic • Angular • JavaScript</span>
+        </div>
+		-->
+    </div>
+
+</section>
+
 
 <section id="skills">
 

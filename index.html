@@ -19,7 +19,7 @@
 
 body{
     color:#fff;
-    overflow-x:hidden;
+    /*overflow-x:hidden;*/
     background:#000;
 }
 
@@ -951,6 +951,11 @@ footer{
     transition-delay:.14s;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 </style>
 </head>
 
@@ -965,7 +970,7 @@ function toggleMenu() {
 }
 
 /*** Key Up/Down for Code Inspect ***/
-
+/*
 document.addEventListener('contextmenu', function(e){
     e.preventDefault();
 });

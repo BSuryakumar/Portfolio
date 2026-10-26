@@ -86,6 +86,8 @@ nav{
     justify-content:center;
     text-align:center;
     padding:120px 20px 80px;
+	flex-wrap:wrap;
+	flex-direction: column; /* Added Additionally */
 }
 
 .hero-content{
@@ -960,6 +962,185 @@ html, body {
     overflow-x: unset;
 }
 
+.profile-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective:1200px;
+    margin-bottom:40px;
+	position:relative;
+    display:inline-block;
+}
+
+.profile-card{
+    transform-style:preserve-3d;
+}
+
+#profileImage{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:4px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.4),
+        0 0 40px rgba(59,130,246,.3);
+
+    transition:
+        transform .15s ease-out,
+        box-shadow .3s ease;
+}
+
+#profileImage:hover{
+    box-shadow:
+        0 30px 60px rgba(59,130,246,.6),
+        0 0 60px rgba(139,92,246,.5);
+}
+
+/*
+.hero-content{
+    max-width:700px;
+    text-align:left;
+}
+*/
+
+@media(max-width:768px){
+
+    .hero{
+        flex-direction:column;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    #profileImage{
+        width:220px;
+        height:220px;
+    }
+}
+
+
+
+
+
+.message-box{
+
+    position:absolute;
+
+    top:70%;
+    left:110%;
+
+    transform:
+        translateY(-50%)
+        scale(0.8);
+
+    width:350px;
+
+    background:white;
+
+    color:#1e293b;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:all .35s ease;
+
+    z-index:999;
+}
+
+.profile-container:hover .message-box{
+
+    opacity:1;
+
+    visibility:visible;
+
+    /*transform:
+        translateY(-50%)
+        scale(1);*/
+}
+
+.message-header{
+
+    background:
+    linear-gradient(
+        90deg,
+        #3b82f6,
+        #8b5cf6
+    );
+
+    color:white;
+
+    padding:15px;
+
+    font-weight:600;
+
+    border-radius:20px 20px 0 0;
+}
+
+.message-content{
+
+    padding:18px;
+
+    line-height:1.7;
+}
+
+.message-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-12px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border-top:12px solid transparent;
+    border-bottom:12px solid transparent;
+    border-right:12px solid white;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .message-box{
+
+        width:280px;
+
+        left:50%;
+
+        top:110%;
+
+        transform:
+            translateX(-50%)
+            scale(.8);
+    }
+
+    .profile-container:hover .message-box{
+
+        /*transform:
+            translateX(-50%)
+            scale(1);*/
+			
+		display:none;
+    }
+
+    .message-box::before{
+        display:none;
+    }
+}
+
 </style>
 </head>
 
@@ -974,7 +1155,7 @@ function toggleMenu() {
 }
 
 /*** Key Up/Down for Code Inspect ***/
-
+/*
 document.addEventListener('contextmenu', function(e){
     e.preventDefault();
 });
@@ -1043,16 +1224,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <section class="hero">
 
+<div class="hero-left">
+	<div class="profile-container">
+		<div class="profile-card">
+			<img src="face_center.jpeg" alt="Surya Kumar" id="profileImage"> <!-- surya_3D.jpeg -->
+		</div>
+		<div class="message-box">
+			<div class="message-header">
+				🤖 AI Assistant
+			</div>
+
+			<div class="message-body" style="padding:14px;">
+				<h3>👋 Hello Recruiter!</h3>
+				<br>
+				Myself Surya, a Software Engineer Specialist with 8+ years of experience on building Android/Web Applications, Automotive Infotainment Testing.
+				<br><br>
+				<h3>🚀 Why Consider Me?</h3>
+				
+				<div style="text-align:left;">
+				<br>
+				✅ I combine Development + Deployment + Quality Assurance, which helps teams deliver faster with higher quality.
+				<br>
+				✅ End-to-End Product Delivery Experience for global clients.
+				<!--
+				<br>
+				✅ Angular • Vue.js • Node.js • ANDROID • WEB • CAN • CarPlay
+				-->
+				</div>
+				
+				<br>
+				👉 Let's build something impactful together.
+				<br><br>
+				🚀 Looking for challenging opportunities where I can contribute from Day 1.
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
 <div class="hero-content scroll-animation">
 
 <h1>Surya Kumar Balasubramanian</h1>
 
 <h2>
-Senior Software Engineer | SDET | Automotive Infotainment Specialist
+Senior Software Engineer | Automation & QA Engineer | Specialist
 </h2>
 
 <p>
-Experienced Full-Stack Software Developer and Software Development Engineer in Test with 8+ years of expertise in Automotive Infotainment, Android/Web Development, Angular, Vue.js, Node.js, CAN Communication, Bluetooth Validation, CarPlay, Test Automation, Quality Engineering, and Product Delivery.
+Experienced Full-Stack Software Developer & Test Engineer [SDET] with 8+ years of expertise in Automotive Infotainment, Android/Web Apps Development, CAN Communication, Media Validation, Apple CarPlay Certification, Test Automation, Quality Engineering & Product Delivery.
 </p>
 
 <div class="btn-group">
@@ -1333,7 +1553,7 @@ Designed automation frameworks, quality strategies and test solutions for large-
 
 ✅ Full Stack Developer + SDET Expertise<br>
 
-✅ Automotive Infotainment Specialist<br>
+✅ Automotive Infotainment Testing<br>
 
 ✅ Android & Enterprise Web Development<br>
 
@@ -1367,6 +1587,151 @@ Designed automation frameworks, quality strategies and test solutions for large-
 <footer>
 © 2026 Surya Kumar Balasubramanian | Senior Software Engineer | SDET
 </footer>
+
+<script>
+/**** Image-3D will move based on cursor action withing the image ****/
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const card = document.querySelector(".profile-container");
+    const image = document.getElementById("profileImage");
+
+    if(card && image){
+
+        card.addEventListener("mousemove", (e) => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateY = (x - centerX) / 15;
+            const rotateX = -(y - centerY) / 15;
+
+            image.style.transform =
+                `perspective(1000px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 scale(1.08)`;
+
+        });
+
+        card.addEventListener("mouseleave", () => {
+
+            image.style.transform =
+                `perspective(1000px)
+                 rotateX(0deg)
+                 rotateY(0deg)
+                 scale(1)`;
+
+        });
+
+    }
+
+});
+/*************************************/
+
+
+/**** Image-3D will move based on cursor action with the entire website ****/
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const image =
+        document.getElementById("profileImage");
+
+    document.addEventListener("mousemove", (e) => {
+
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const rotateY =
+            (e.clientX - centerX) / 50;
+
+        const rotateX =
+            -(e.clientY - centerY) / 50;
+
+        image.style.transform =
+            `perspective(1200px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             scale(1.03)`;
+
+    });
+
+});
+/*************************************/
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const image = document.getElementById("profileImage");
+
+    image.addEventListener("mousemove", (e) => {
+
+        const rect = image.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = (x - centerX) / 12;
+        const rotateX = -(y - centerY) / 12;
+
+        image.style.transform =
+            `perspective(1200px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            scale(1.08)`;
+    });
+
+    image.addEventListener("mouseleave", () => {
+
+        image.style.transform =
+            `perspective(1200px)
+            rotateX(0deg)
+            rotateY(0deg)
+            scale(1)`;
+    });
+
+});
+
+
+
+
+
+
+
+const image = document.getElementById("profileImage");
+
+document.addEventListener("mousemove", (e) => {
+
+    const percent = e.clientX / window.innerWidth;
+
+    if(percent < 0.2){
+        image.src = "face_left.jpeg";
+    }
+    else if(percent < 0.4){
+        image.src = "face_left.jpeg"; //"face-left-center.png";
+    }
+    else if(percent < 0.6){
+        image.src = "face_center.jpeg";
+    }
+    else if(percent < 0.8){
+        image.src = "surya_3D.jpeg"; //"face-right-center.png";
+    }
+    else{
+        image.src = "face_right.jpeg";
+    }
+
+});
+</script>
 
 </body>
 </html>

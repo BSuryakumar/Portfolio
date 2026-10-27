@@ -1030,14 +1030,14 @@ html, body {
 
     position:absolute;
 
-    top:70%;
-    left:110%;
+    top:50%; /*70%*/
+    left:70%; /*110%*/
 
     transform:
         translateY(-50%)
         scale(0.8);
 
-    width:350px;
+    width:550px; /*350px*/
 
     background:white;
 
@@ -1135,9 +1135,56 @@ html, body {
 			
 		display:none;
     }
+	
 
     .message-box::before{
         display:none;
+    }
+}
+
+@media(max-width:1117px){
+
+    .message-box{
+        left:50%;
+    }
+}
+
+@media(max-width:1005px){
+
+    .message-box{
+        left:35%;
+    }
+}
+
+@media(max-width:920px){
+
+    .message-box{
+        left: 50%;
+        width: 500px;
+    }
+}
+
+@media(max-width:915px){
+
+    .message-box{
+        left: 35%;
+        width: 535px;
+    }
+}
+
+@media(max-width:893px){
+
+    .message-box{
+        left: 35%;
+        width: 500px;
+    }
+}
+
+@media(max-width:831px){
+
+    .message-box{
+        left: 50%;
+        width: 420px;
     }
 }
 
